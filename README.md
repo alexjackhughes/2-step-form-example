@@ -4,10 +4,11 @@ _A Two-Step form, built with React and Node._
 
 ## Getting Started
 
-After installing the dependencies in both `client` and the main folder, you can run the application:
+After installing the dependencies in the main folder `two-step-form` and `client`,
+you can run the application with:
 
 ```
-npm run-script start
+npm run start
 ```
 
 ## Author
