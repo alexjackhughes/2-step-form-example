@@ -3,7 +3,7 @@ const _ = require("lodash");
 var bodyParser = require("body-parser");
 
 const app = express();
-const port = 3000;
+const port = 3003;
 
 // configure the app to use bodyParser()
 app.use(
