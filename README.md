@@ -11,6 +11,14 @@ you can run the application with:
 npm run start
 ```
 
+If you're making changes to the code and want live reloading, use command:
+
+```
+npm run dev
+```
+
+## Running
+
 ## Author
 
 #### **Alexander Jack Hughes**
