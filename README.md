@@ -8,16 +8,18 @@ After installing the dependencies (i.e. `npm install`) in the root folder and `c
 you can run the application with command:
 
 ```
+npm run build
+```
+
+```
 npm run start
 ```
 
-If you're making changes to the code and want live reloading, use command:
+If you're making changes to the code and want live reloading of the server, use command:
 
 ```
 npm run dev
 ```
-
-## Running
 
 ## Author
 

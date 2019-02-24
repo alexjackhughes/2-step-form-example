@@ -13,7 +13,13 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/", (req, res) => {
+    res.status(400).send({
+      title: `<h1>Survey Form</h1>`,
+      body: "<p>Ready to get started? You just need to fill out the form</p>",
+      button: "Submit"
+    });
+}
 
 app.post("/form", (req, res) => {
   if (_.isEmpty(req.body)) {
@@ -24,6 +30,8 @@ app.post("/form", (req, res) => {
     return;
   }
 
+  console.log("body contents", req.body);
+  
   res.status(200).send({
     message: "The form was submitted successfully!",
     data: req.body
