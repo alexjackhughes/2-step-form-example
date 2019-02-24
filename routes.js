@@ -3,9 +3,21 @@ const _ = require("lodash");
 module.exports = function(app) {
   app.get("/", (req, res) => {
     res.status(400).send({
-      title: `<h1>Survey Form</h1>`,
-      body: "<p>Ready to get started? You just need to fill out the form</p>",
-      button: "Submit"
+      title: `Survey Form`,
+      body: "Ready to get started? You just need to fill out the form",
+      button: "Submit",
+      form: {
+        stepOne: {
+          title: "Title",
+          name: "Name",
+          dob: "Date of Birth"
+        },
+        stepTwo: {
+          location: "Current Location",
+          date: "Current Date & Time",
+          feedback: "User Feedback"
+        }
+      }
     });
   });
 

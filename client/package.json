@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production && npm run-script scss && npm run build:css && npm run build:js && npm run build:img",
+    "build": "webpack --mode production && npm run-script scss",
     "scss": "node-sass -o dist/css assets/scss/style.scss",
     "concat:css": "concat -o dist/css/styles.css dist/css/style.css assets/css/test.css",
     "concat:js": "mkdir -p dist/js && concat -o dist/js/scripts.js assets/js/test1.js assets/js/test2.js",
@@ -23,9 +23,18 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.3.3",
+    "@babel/plugin-transform-async-to-generator": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "clean-css-cli": "^4.1.10",
     "concat": "^1.0.3",
     "html-loader": "^0.5.5",
@@ -36,6 +45,11 @@
     "react-dom": "^16.8.3",
     "uglify-js": "^3.1.7",
     "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "axios": "^0.18.0"
   }
 }
