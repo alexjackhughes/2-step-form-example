@@ -14,7 +14,7 @@ class Form extends Component {
 
   submitFormOne(res) {
     this.setState({
-      form: res,
+      formOne: res,
       showNextForm: true
     });
   }
@@ -24,7 +24,7 @@ class Form extends Component {
       <div className="form">
         {!this.state.showNextForm ? (
           <StepOne
-            fields={this.props.form.stepOne}
+            fields={this.props.form}
             submit={this.submitFormOne.bind(this)}
           />
         ) : (

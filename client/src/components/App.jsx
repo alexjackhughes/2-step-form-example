@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import Form from "./container/Form.jsx";
+import Footer from "./presentational/Footer.jsx";
 
 class App extends Component {
   constructor() {
@@ -28,7 +29,7 @@ class App extends Component {
         });
       }
     } catch (e) {
-      this.handleAlert(false, e);
+      this.handleAlert(false, e.message);
     }
   }
 
@@ -53,7 +54,7 @@ class App extends Component {
         "There was an error submitting, please try again!"
       );
     } catch (e) {
-      this.handleAlert(false, e);
+      this.handleAlert(false, e.message);
     }
   }
 
@@ -72,6 +73,7 @@ class App extends Component {
         <h1>{this.state.title}</h1>
         <p>{this.state.body}</p>
         <Form form={this.state.form} submit={this.handleSubmit.bind(this)} />
+        <Footer />
       </div>
     );
   }

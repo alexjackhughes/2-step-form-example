@@ -30,7 +30,7 @@ module.exports = function(app) {
       return;
     }
 
-    console.log("body contents", req.body);
+    console.log("The form submitted: ", req.body);
 
     res.status(200).send({
       message: "Awesome! The form was submitted successfully!",
