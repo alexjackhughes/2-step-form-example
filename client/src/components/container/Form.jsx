@@ -1,19 +1,39 @@
 import React, { Component } from "react";
+
 import StepOne from "../presentational/StepOne.jsx";
 import StepTwo from "../presentational/StepTwo.jsx";
-import axios from "axios";
 
 class Form extends Component {
-  async componentDidMount() {
-    const data = await axios.get("http://localhost:3003/");
-    console.log("data");
+  constructor() {
+    super();
+    this.state = {
+      showNextForm: false,
+      formOne: {}
+    };
   }
+
+  submitFormOne(res) {
+    this.setState({
+      form: res,
+      showNextForm: true
+    });
+  }
+
   render() {
     return (
       <div className="form">
-        <h1>Hello form!</h1>
-        <StepOne />
-        <StepTwo />
+        {!this.state.showNextForm ? (
+          <StepOne
+            fields={this.props.form.stepOne}
+            submit={this.submitFormOne.bind(this)}
+          />
+        ) : (
+          <StepTwo
+            fields={this.props.form.stepTwo}
+            completedForm={this.state.formOne}
+            submit={this.props.submit}
+          />
+        )}
       </div>
     );
   }

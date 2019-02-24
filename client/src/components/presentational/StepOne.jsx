@@ -1,7 +1,7 @@
 import React from "react";
 
 const StepOne = props => {
-  return <h1>Hey</h1>;
+  return <h1>step one</h1>;
 };
 
 export default StepOne;

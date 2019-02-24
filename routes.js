@@ -2,7 +2,7 @@ const _ = require("lodash");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
-    res.status(400).send({
+    res.status(200).send({
       title: `Survey Form`,
       body: "Ready to get started? You just need to fill out the form",
       button: "Submit",
@@ -33,7 +33,7 @@ module.exports = function(app) {
     console.log("body contents", req.body);
 
     res.status(200).send({
-      message: "The form was submitted successfully!",
+      message: "Awesome! The form was submitted successfully!",
       data: req.body
     });
     return;
