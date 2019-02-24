@@ -1,11 +1,10 @@
 const express = require("express");
-const _ = require("lodash");
 var bodyParser = require("body-parser");
 
 const app = express();
 const port = 3003;
 
-// configure the app to use bodyParser()
+// Configure the app to use bodyParser()
 app.use(
   bodyParser.urlencoded({
     extended: true
@@ -13,30 +12,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
-    res.status(400).send({
-      title: `<h1>Survey Form</h1>`,
-      body: "<p>Ready to get started? You just need to fill out the form</p>",
-      button: "Submit"
-    });
-}
-
-app.post("/form", (req, res) => {
-  if (_.isEmpty(req.body)) {
-    res.status(400).send({
-      message: "You've sent a request with an empty body!",
-      data: req.body
-    });
-    return;
-  }
-
-  console.log("body contents", req.body);
-  
-  res.status(200).send({
-    message: "The form was submitted successfully!",
-    data: req.body
-  });
-  return;
-});
+// Add the routes file
+require("./routes")(app);
 
 app.listen(port, () => console.log(`Server is listening on port ${port}!`));

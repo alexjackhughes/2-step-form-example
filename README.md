@@ -12,7 +12,7 @@ npm run build
 ```
 
 ```
-npm run start
+npm start
 ```
 
 If you're making changes to the code and want live reloading of the server, use command:
