@@ -40,7 +40,8 @@ class App extends Component {
   async handleSubmit(params) {
     try {
       const res = await axios.post(`${this.state.url}/form`, params);
-      if (res.data.message === 200) {
+      console.log(res);
+      if (res.status === 200) {
         this.handleAlert(true, res.data.message);
         return;
       }

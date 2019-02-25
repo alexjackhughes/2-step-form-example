@@ -4,12 +4,14 @@ _A Two-Step form, built with React and Node._
 
 ## Getting Started
 
-After installing the dependencies (i.e. `npm install`) in the root folder and `client`,
-you can run the application with command:
+To begin, navigate to the `root` folder - you can build the react app with Webpack
+and install dependencies using command:
 
 ```
 npm run build
 ```
+
+To run the application, use command:
 
 ```
 npm start
