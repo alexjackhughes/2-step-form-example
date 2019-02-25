@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import * as moment from "moment";
 
 import StepOne from "../presentational/StepOne.jsx";
 import StepTwo from "../presentational/StepTwo.jsx";
@@ -8,14 +9,28 @@ class Form extends Component {
     super();
     this.state = {
       showNextForm: false,
-      formOne: {}
+      formOne: {
+        title: "",
+        name: "",
+        dob: moment().format("YYYY-MM-DD")
+      },
+      formTwo: {
+        location: "",
+        date: "",
+        feedback: ""
+      }
     };
   }
 
   submitFormOne(res) {
     this.setState({
-      formOne: res,
-      showNextForm: true
+      formOne: res
+    });
+  }
+
+  showNextForm(bool) {
+    this.setState({
+      showNextForm: bool
     });
   }
 
@@ -24,13 +39,15 @@ class Form extends Component {
       <div className="form">
         {!this.state.showNextForm ? (
           <StepOne
-            fields={this.props.form}
+            form={this.state.formOne}
+            showNextForm={this.showNextForm.bind(this)}
             submit={this.submitFormOne.bind(this)}
           />
         ) : (
           <StepTwo
-            fields={this.props.form.stepTwo}
-            completedForm={this.state.formOne}
+            formOne={this.state.formOne}
+            formTwo={this.state.formTwo}
+            showNextForm={this.showNextForm.bind(this)}
             submit={this.props.submit}
           />
         )}

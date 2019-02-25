@@ -4,20 +4,7 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     res.status(200).send({
       title: `Survey Form`,
-      body: "Ready to get started? You just need to fill out the form",
-      button: "Submit",
-      form: {
-        stepOne: {
-          title: "Title",
-          name: "Name",
-          dob: "Date of Birth"
-        },
-        stepTwo: {
-          location: "Current Location",
-          date: "Current Date & Time",
-          feedback: "User Feedback"
-        }
-      }
+      body: "Ready to get started? You just need to fill out the form"
     });
   });
 
@@ -30,7 +17,7 @@ module.exports = function(app) {
       return;
     }
 
-    console.log("The form submitted: ", req.body);
+    console.log("The form was successfully submitted! ", req.body);
 
     res.status(200).send({
       message: "Awesome! The form was submitted successfully!",

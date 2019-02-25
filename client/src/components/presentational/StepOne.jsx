@@ -1,13 +1,10 @@
 import React, { Component } from "react";
+import * as moment from "moment";
 
 class StepOne extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: "",
-      name: "",
-      dob: "2018-07-22"
-    };
+    this.state = this.props.form;
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,6 +22,7 @@ class StepOne extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.submit(this.state);
+    this.props.showNextForm(true);
   }
 
   render() {
@@ -53,8 +51,10 @@ class StepOne extends Component {
           <input
             type="date"
             name="dob"
-            min="1900-01-01"
-            max="2018-12-31"
+            min={moment()
+              .subtract(100, "years")
+              .format("YYYY-MM-DD")}
+            max={moment().format("YYYY-MM-DD")}
             value={this.state.dob}
             onChange={this.handleChange}
           />
