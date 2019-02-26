@@ -1,22 +1,54 @@
-// Font weights
-$light: 100;
-$regular: 400;
-$bold: 600;
+@import "colors";
+@import "fonts";
 
-// Base Font
-$base-font-family: sans-serif;
-$base-font-weight: $regular;
-$base-font-size: 13px;
-$base-line-height: 1.4;
-
-// Fixed Font
-$fixed-font-family: monospace;
-$fixed-font-size: 85%;
-$fixed-line-height: $base-line-height;
-
-// Headings
-$header-font-weight: $bold;
+html,
+body {
+  height: 100%;
+}
 
 body {
-  color: red;
+  display: flex;
+  flex-direction: column;
+
+  background-image: linear-gradient(
+    to right top,
+    #e94755,
+    #ec475f,
+    #ee476a,
+    #ef4874,
+    #f04a7f
+  );
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+.app {
+  flex: 1 0 auto;
+}
+
+h1 {
+  font-family: $title-font-family;
+  font-size: $title-font-size;
+}
+
+.container {
+  text-align: center;
+}
+
+.form {
+  margin: 30px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.form:hover {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  flex-shrink: 0;
+  color: white;
+  opacity: 0.5;
 }

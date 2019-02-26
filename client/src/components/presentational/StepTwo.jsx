@@ -60,6 +60,7 @@ class StepTwo extends Component {
           />
         </label>
         <input type="submit" value="Next Step" />
+        <button onClick={() => this.props.showNextForm(false)}>Go Back</button>
       </form>
     );
   }

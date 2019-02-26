@@ -3,7 +3,7 @@ const _ = require("lodash");
 module.exports = function(app) {
   app.get("/", (req, res) => {
     res.status(200).send({
-      title: `Survey Form`,
+      title: `SURVEY FORM`,
       body: "Ready to get started? You just need to fill out the form"
     });
   });

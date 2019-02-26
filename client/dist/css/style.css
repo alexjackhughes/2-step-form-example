@@ -1,2 +1,35 @@
+html,
 body {
-  color: red; }
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right top, #e94755, #ec475f, #ee476a, #ef4874, #f04a7f);
+  font-family: "Roboto Slab", serif;
+  font-size: 15px; }
+
+.app {
+  flex: 1 0 auto; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 54px; }
+
+.container {
+  text-align: center; }
+
+.form {
+  margin: 30px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
+
+.form:hover {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3); }
+
+.footer {
+  flex-shrink: 0;
+  color: white;
+  opacity: 0.5; }
