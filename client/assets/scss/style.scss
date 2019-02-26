@@ -1,6 +1,13 @@
 @import "colors";
 @import "fonts";
 
+@import "form";
+
+h1 {
+  font-family: $title-font-family;
+  font-size: $title-font-size;
+}
+
 html,
 body {
   height: 100%;
@@ -26,29 +33,31 @@ body {
   flex: 1 0 auto;
 }
 
-h1 {
-  font-family: $title-font-family;
-  font-size: $title-font-size;
-}
-
 .container {
   text-align: center;
 }
 
-.form {
-  margin: 30px;
-  padding: 30px;
-  background-color: white;
-  border-radius: 30px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+.header {
+  margin-bottom: 20px;
 }
 
-.form:hover {
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+button {
+  font-family: $title-font-family;
+  padding: 14px;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  background-color: $red;
+}
+
+button:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background-color: $dark-red;
 }
 
 .footer {
   flex-shrink: 0;
   color: white;
   opacity: 0.5;
+  margin-top: 20px;
 }

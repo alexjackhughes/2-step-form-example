@@ -1,0 +1,48 @@
+.form {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.form:hover {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+form {
+  margin: 30px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 3px solid $red;
+}
+
+label {
+  font-family: $title-font-family;
+  font-size: $medium-font-size;
+}
+
+input,
+textarea {
+  border: none;
+  background-color: $grey;
+  border-radius: 10px;
+  padding: 9px;
+  margin: 10px;
+  font-size: $base-font-size;
+}
+
+input[type="submit"] {
+  font-family: $title-font-family;
+  padding: 14px;
+  color: white;
+  background-color: $green;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background-color: $dark-green;
+}

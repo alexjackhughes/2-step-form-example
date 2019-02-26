@@ -28,38 +28,35 @@ class StepOne extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Title:
-          <input
-            type="text"
-            name="title"
-            value={this.state.title}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Date of Birth:
-          <input
-            type="date"
-            name="dob"
-            min={moment()
-              .subtract(100, "years")
-              .format("YYYY-MM-DD")}
-            max={moment().format("YYYY-MM-DD")}
-            value={this.state.dob}
-            onChange={this.handleChange}
-          />
-        </label>
-        <input type="submit" value="Next Step" />
+        <label>TITLE</label>
+        <input
+          type="text"
+          name="title"
+          className="col-sm"
+          value={this.state.title}
+          onChange={this.handleChange}
+        />
+        <label>NAME</label>
+        <input
+          type="text"
+          name="name"
+          className="col-sm"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
+        <label>DATE OF BIRTH</label>
+        <input
+          type="date"
+          name="dob"
+          className="col-sm"
+          min={moment()
+            .subtract(100, "years")
+            .format("YYYY-MM-DD")}
+          max={moment().format("YYYY-MM-DD")}
+          value={this.state.dob}
+          onChange={this.handleChange}
+        />
+        <input type="submit" value="NEXT STEP" />
       </form>
     );
   }

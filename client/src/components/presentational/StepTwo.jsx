@@ -31,36 +31,33 @@ class StepTwo extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
-        <label>
-          Current Location:
-          <input
-            type="text"
-            name="location"
-            value={this.state.location}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label>
-          Current Date:
-          <input
-            type="datetime-local"
-            name="date"
-            value={this.state.date}
-            onChange={this.handleChange}
-            disabled={true}
-          />
-        </label>
-        <label>
-          User Feedback:
-          <textarea
-            type="textarea"
-            name="feedback"
-            value={this.state.feedback}
-            onChange={this.handleChange}
-          />
-        </label>
-        <input type="submit" value="Next Step" />
-        <button onClick={() => this.props.showNextForm(false)}>Go Back</button>
+        <label>CURRENT LOCATION</label>
+        <input
+          type="text"
+          name="location"
+          className="col-sm"
+          value={this.state.location}
+          onChange={this.handleChange}
+        />
+        <label>CURRENT DATE & TIME</label>
+        <input
+          type="datetime-local"
+          name="date"
+          className="col-sm"
+          value={this.state.date}
+          onChange={this.handleChange}
+          disabled={true}
+        />
+        <label>USER FEEDBACK</label>
+        <textarea
+          type="textarea"
+          name="feedback"
+          className="col-sm"
+          value={this.state.feedback}
+          onChange={this.handleChange}
+        />
+        <input type="submit" value="SUBMIT FORM" />
+        <button onClick={() => this.props.showNextForm(false)}>GO BACK</button>
       </form>
     );
   }

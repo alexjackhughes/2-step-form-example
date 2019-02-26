@@ -80,8 +80,10 @@ class App extends Component {
     return (
       <div className="App">
         {this.renderAlert()}
-        <h1>{this.state.title}</h1>
-        <p>{this.state.body}</p>
+        <div className="header">
+          <h1>{this.state.title}</h1>
+          <p>{this.state.body}</p>
+        </div>
         <Form submit={this.handleSubmit.bind(this)} />
         <Footer />
       </div>
