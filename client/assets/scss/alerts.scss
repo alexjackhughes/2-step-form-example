@@ -1,0 +1,20 @@
+.alert {
+  padding: 18px;
+  margin: 18px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  border: 3px solid;
+}
+
+.alert:hover {
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+.alert-success {
+  background-color: $green;
+  border-color: $dark-green;
+}
+
+.alert-danger {
+  background-color: white;
+  opacity: 0.3;
+  border-color: $dark-red;
+}
